@@ -1,5 +1,7 @@
+import Text from "./components/inheritance/Text";
+
 function App() {
-  return <div>Hello</div>;
+  return <Text />;
 }
 
 export default App;
