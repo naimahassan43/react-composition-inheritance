@@ -1,7 +1,12 @@
-function Text({ addEmoji }) {
-  const text = "I am JavaScript Language";
+export default function Text({ addEmoji, addBracket }) {
+  let text = "I am JavaScript Language";
 
-  return <div>{addEmoji ? addEmoji(text, "💙") : text}</div>;
+  if (addEmoji) {
+    text = addEmoji(text, "💙");
+  }
+  if (addBracket) {
+    text = addBracket(text);
+  }
+
+  return <div>{text}</div>;
 }
-
-export default Text;
